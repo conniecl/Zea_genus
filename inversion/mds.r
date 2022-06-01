@@ -1,0 +1,5 @@
+arg<-commandArgs(T)
+a<-read.table(paste(arg[1],"dist",sep="."))
+a <- as.matrix(a)
+fit1<-cmdscale(a,eig=TRUE, k=2)
+write.table(fit1$points,file=paste(arg[1],".mds",sep=""),quote=F,sep="\t",col.names=F)

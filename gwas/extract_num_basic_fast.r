@@ -1,0 +1,7 @@
+library(ncdf4)
+argv <- commandArgs(TRUE)
+nc<-nc_open(paste(argv[1],"1.nc",sep=""))
+lat <- ncvar_get( nc = nc, varid = 'lat')
+lon <- ncvar_get( nc = nc, varid = 'lon')
+num<-ncvar_get(nc,varid=argv[1],start=c(1,1),count=c(-1,-1))
+write.table(num,file=paste(argv[1],".num",sep=""),sep="\t",row.names=lon,col.names=lat)

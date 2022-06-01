@@ -1,0 +1,5 @@
+library(ggplot2)
+argv <- commandArgs(TRUE)
+data<-read.table(paste(argv[1],".plot",sep=""),header=T)
+p<-ggplot(data)+geom_point(aes(x=PC1,y=PC2,color=type),size=2)+theme_bw()+theme(panel.grid = element_blank(),axis.text = element_text(size=16),axis.title = element_text(size=21),legend.position='none')+labs(x="PC1",y="PC2")+scale_color_manual(values=c("#29a0d9","#ff932e","#0a8646","grey"))
+ggsave(p,file=paste(argv[1],".png",sep=""),height=7,width=7)
