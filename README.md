@@ -1,6 +1,8 @@
 # Zea_genus
 
-**zeamap_snpcalling**: for teosinte and maize snp combining
+**zeamap_snpcalling**: for teosinte and maize snp calling and combining
+
+**snp_anno"**: for snp annonation
 
 **structure_analysis**: for structure and pca analysis, phylogenetic tree construction
 
