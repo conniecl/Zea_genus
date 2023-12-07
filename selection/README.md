@@ -1,3 +1,4 @@
+## get the input file
 perl nold_list.pl mex $i #$i=1,2,3...10
 perl nold_pos.pl mex $i #$i=1,2,3...10
 perl snp_genetic.pl mex $i #$i=1,2,3...10
